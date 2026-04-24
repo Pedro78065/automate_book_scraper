@@ -1,0 +1,6 @@
+.venv
+.env
+__pycache__
+produtos.csv
+LIVROS_FILTRADOS.csv
+livros_baratos.csv
