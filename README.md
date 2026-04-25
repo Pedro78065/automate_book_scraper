@@ -83,13 +83,6 @@ playwright install
 
 ---
 
-## Observações importantes
-
-* O uso de scraping pode ser limitado por alguns sites
-* Evite fazer muitas requisições em pouco tempo (pode causar bloqueio)
-
----
-
 ## 📄 Licença
 
 Este projeto é apenas para fins educacionais
