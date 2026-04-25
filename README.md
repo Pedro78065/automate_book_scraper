@@ -1,5 +1,4 @@
-# 📚 Automate Book Scraper 
-### (feito por:"Pedro.H.C")
+# 📚 Automate Book Scraper-(feito por:"Pedro.H.C")
 
 Automação para coleta de dados de livros de forma simples e rápida.
 
