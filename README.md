@@ -7,6 +7,12 @@ Esse script com interface gráfica tem como a função principal fazer um scrapi
 
 * você deve digitar uma nova quantidade de páginas caso queira coletar mais ou menos de 5 páginas do site... e alterar o limite para modificar os preços máximos dos livros que você deseja.
 
+# para instalar os requirements(dependências obrigatórias para o funcionamento do programa):
+- ## Instalação
+"no seu terminal" digite;
+pip install -r requirements.txt
+playwright install
+
 # "principais" bibliotecas usadas:
 * playwright
 * pandas 
