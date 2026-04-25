@@ -1,9 +1,7 @@
-setup.py ou setup.sh
 pip install playwright
+pip install pandas
+pip install ipykernel
+pip install pip install playwright-stealth
+pip install tkinter
+pip install threading
 playwright install
-
-Ou no Windows:
-
-pip install playwright
-playwright install
-pause
