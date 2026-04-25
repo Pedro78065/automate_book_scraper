@@ -6,6 +6,7 @@ Automação para coleta de dados de livros de forma simples e rápida.
 
 ## Funcionalidades
 
+* Te economiza horas de trabalho manual
 * Scraping automático de livros
 * Extração de título, preço e outras informações
 * Exportação para CSV
