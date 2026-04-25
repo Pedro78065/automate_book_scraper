@@ -1,3 +1,4 @@
+# main.py(arquivo que deve ser executado):
 este programa; ele faz o seguinte: ele entra em site de venda de "livros" vendidos em "Euros", você escolhe quantas páginas você quer que o programa analise e qual o preço máximo do(s) livro(s) que vc deseja, logo após ele baixa todos os dados e transforma em uma planilha excel, filtrando do mais barato até o mais caro com base no preço que você escolheu... isso economiza horas de trabalho manual e automatiza tudo em menos de 2 minutos.
 # AUTOMATE WEB SCRAPING BOOKS - (feito por: Pedro.H.C)
 
