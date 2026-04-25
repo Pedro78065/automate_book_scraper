@@ -10,8 +10,8 @@ Esse script com interface gráfica tem como a função principal fazer um scrapi
 # para instalar os requirements(dependências obrigatórias para o funcionamento do programa):
 - ## Instalação
 "no seu terminal" digite;
-pip install -r requirements.txt
-playwright install
+* pip install -r requirements.txt
+* playwright install
 
 # "principais" bibliotecas usadas:
 * playwright
