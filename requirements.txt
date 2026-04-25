@@ -1,0 +1,9 @@
+setup.py ou setup.sh
+pip install playwright
+playwright install
+
+Ou no Windows:
+
+pip install playwright
+playwright install
+pause
