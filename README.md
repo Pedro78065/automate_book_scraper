@@ -1,10 +1,11 @@
-# 📚 Automate Book Scraper
+# 📚 Automate Book Scraper 
+### (feito por:"Pedro.H.C")
 
 Automação para coleta de dados de livros de forma simples e rápida.
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 * Scraping automático de livros
 * Extração de título, preço e outras informações
@@ -21,7 +22,7 @@ Antes de começar, você precisa ter instalado:
 
 ---
 
-## 📦 Instalação
+## Instalação
 
 Clone o repositório:
 
@@ -44,7 +45,7 @@ playwright install
 
 ---
 
-## ▶️ Como usar
+## Como usar
 
 Execute o script principal:
 
@@ -83,7 +84,7 @@ playwright install
 
 ---
 
-## 🧠 Observações importantes
+## Observações importantes
 
 * O uso de scraping pode ser limitado por alguns sites
 * Evite fazer muitas requisições em pouco tempo (pode causar bloqueio)
@@ -92,4 +93,4 @@ playwright install
 
 ## 📄 Licença
 
-Este projeto é apenas para fins educacionais.
+Este projeto é apenas para fins educacionais
