@@ -1,6 +1,7 @@
 # 📚 Automate Book Scraper-(feito por:"Pedro.H.C")
 
-Automação para coleta de dados de livros de forma simples e rápida.
+Automação para coleta de dados de livros de forma simples e rápida, com exportação em CSV e disponibilização dos dados via API com FastAPI.
+
 
 ---
 
@@ -10,6 +11,8 @@ Automação para coleta de dados de livros de forma simples e rápida.
 * Scraping automático de livros
 * Extração de título, preço e outras informações
 * Exportação para CSV
+* cria api localhost que mostra dados e scraping dos livros
+- API local para consulta e filtragem dos dados
 
 ---
 
@@ -52,6 +55,20 @@ Execute o script principal:
 ```bash
 python main.py
 ```
+---
+
+## Como criar api
+
+no terminal do projeto(book_scraper) digite:
+
+```bash
+uvicorn main:app --reload
+```
+
+## Endpoints da API
+* /livros/atualizar (sempre que iniciar a api, use para o scraper coletar dados pelo primeira vez)
+* /livros
+* /livros/20 (ou preço que deseja filtrar)
 
 ---
 

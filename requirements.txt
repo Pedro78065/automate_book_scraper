@@ -4,4 +4,6 @@ pip install ipykernel
 pip install pip install playwright-stealth
 pip install tkinter
 pip install threading
+pip install fastapi
+pip install uvicorn
 playwright install
