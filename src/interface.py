@@ -1,11 +1,18 @@
 import tkinter as tk
 import threading
 from src.auto_scraper import scraper
+from src.service import dados, dados_filtrados, salvar_todos_csv
 
-def automacao():
+def automacao_interface():
+
     def rodar_scraper():
         try:
-            scraper()
+            numeric_pages = int(input('Digite o número de páginas: '))
+            limit = int(input('Digite o valor máximo do livros: '))
+        except Exception as e:
+            print(f'Erro:{e}')   
+        try:
+            salvar_todos_csv(numeric_pages, limit)
             texto.config(text='Automação concluída!')
         except Exception as e:
             print(f'Error:{e}')

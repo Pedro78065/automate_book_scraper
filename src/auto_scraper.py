@@ -2,16 +2,10 @@ from playwright.sync_api import sync_playwright
 from playwright_stealth import Stealth
 import pandas as pd
 
-def scraper(num_page = 5, limite = 90):
+def scraper(num_page = 5):
     """
-    num_page: serve para definir quantas páginas vc quer coletar os dados.
+    :num_page: serve para definir quantas páginas vc quer coletar os dados.
     """
-    try:
-        num_page = int(input('Digite o número de páginas: '))
-        limite = int(input('Digite o valor máximo do livros: '))
-    except Exception as e:
-        print(f'Erro:{e}')
-
     with sync_playwright() as p:
         try:
             browser = p.chromium.launch(headless=True)
@@ -52,13 +46,9 @@ def scraper(num_page = 5, limite = 90):
                 print(f'Erro:{e}')
 
             df = pd.DataFrame(list_produtos)
-            df.to_csv('produtos.csv', index=False)
-            df = pd.read_csv('produtos.csv', sep=',')
             print(f'produtos cadastrados: {len(list_produtos)}')
-            df["Price"] = df["Price"].str.extract(r"£(\d+\.\d+)").astype(float)
-            livro_barato = df[df['Price'] <= limite]
-            livro_barato.to_csv('LIVROS_FILTRADOS.csv', index=False)
-
+            return df
+        
         except Exception as e:
             print(f'Erro:{e}')
 
