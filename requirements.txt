@@ -1,0 +1,7 @@
+pip install playwright
+pip install pandas
+pip install ipykernel
+pip install pip install playwright-stealth
+pip install tkinter
+pip install threading
+playwright install

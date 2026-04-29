@@ -1,18 +1,89 @@
-acabei de criar um programa; ele faz o seguinte: ele entra em site de venda de "livros" vendidos em "Euros", vc escolhe quantas páginas vc quer que o programa analise e qual o preço máximo do(s) livro(s) que vc deseja, logo após ele baixa todos os dados e transforma em uma planilha excel, filtrando do mais barato até o mais caro com base no preço que vc escolheu... isso economiza horas de trabalho manual e automatiza tudo em menos de 2 minutos.
-# AUTOMATE WEB SCRAPING BOOKS - (feito por: Pedro.H.C)
+# 📚 Automate Book Scraper-(feito por:"Pedro.H.C")
 
-Esse script com interface gráfica tem como a função principal fazer um scraping(coleta de dados) dos livros do site: https://books.toscrape.com/.
-Ele te economiza horas de pesquisa e faz isso em menos de 2 minutos :).
+Automação para coleta de dados de livros de forma simples e rápida.
 
-* você pode editar o num_pages da função caso queira coletar mais ou menos de 5 páginas do site.
+---
 
-# "principais" bibliotecas usadas":
-* playwright
-* pandas 
-* tkinter
+## Funcionalidades
 
-# analise.ipynb: 
+* Te economiza horas de trabalho manual
+* Scraping automático de livros
+* Extração de título, preço e outras informações
+* Exportação para CSV
 
-- detalhe: "só pra analise(não é necessário e não faz parte do programa)".
+---
 
-Lá você pode alterar o "20" do df[df['Price'] < 20] para adicionar um valor maximo dos livro que deseja filtrar como "livro_barato", logo após executar ele coletará todos os dados com base no valor escolhido(20R$) e baixara em um arquivo ".csv".
+## ⚙️ Requisitos
+
+Antes de começar, você precisa ter instalado:
+
+* Python 3.10+
+* pip
+
+---
+
+## Instalação
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/Pedro78065/automate_book_scraper.git
+cd automate_book_scraper
+```
+
+Instale as dependências:
+
+```bash
+pip install -r requirements.txt
+```
+
+Instale os navegadores do Playwright:
+
+```bash
+playwright install
+```
+
+---
+
+## Como usar
+
+Execute o script principal:
+
+```bash
+python main.py
+```
+
+---
+
+## ⚠️ Problemas comuns
+
+### ❌ Erro: "playwright not found"
+
+Solução:
+
+```bash
+pip install playwright
+```
+
+---
+
+### ❌ Erro: navegador não abre
+
+Solução:
+
+```bash
+playwright install
+```
+
+---
+
+### ❌ Interface não abre (Tkinter)
+
+* Certifique-se de estar rodando no PC
+* Não funciona corretamente em Termux/Android
+
+---
+
+## 📄 Licença
+
+Este projeto é apenas para fins educacionais
