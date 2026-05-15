@@ -2,6 +2,9 @@ from src.interface import automacao_interface
 from fastapi import FastAPI
 from src.service import dados, dados_filtrados
 import pandas as pd
+from fastapi.middleware.cors import CORSMiddleware
+from src.database import visualizar_table, visualizar_filter, deletar_database
+import uvicorn
 
 lista = list()
 lista_filtrada = list()
@@ -20,6 +23,14 @@ def atualizar_filter(limit = 10000):
 
 #API
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://127.0.0.1:5500", "http://127.0.0.1:3000"],  # ou "*"
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 #rota
 @app.get('/livros/atualizar')
@@ -44,30 +55,38 @@ def server():
 @app.get('/livros')
 def livros():
     try:
-        if not lista:
-            return {"erro": "dados não carregados, use /livros/atualizar"}
-        else:
-            return lista
+        return visualizar_table("dados")
     except Exception as e:
-        return {'Erro':str(e)}
-    
+        return {"Erro":str(e)}
 
+    
+@app.get('/deletar')
+def deletar():
+    try:
+        deletar_database("scraper")
+        return {"sucesso ao deletar dados"}
+    except Exception as e:
+        return{'Erro':str(e)}
+    
+   
 #rota3
 @app.get('/livros/{limit}')
 def books(limit:int):
     try: 
-        df = pd.DataFrame(lista)
-        df = df[df['Price'] <= limit]
-        df = df[['Title', 'Price']].sort_values(by='Price')
-        df = df.to_dict('records')
-        return df
+        return visualizar_filter("dados",f"{limit}")
     except Exception as e:
         return {'Erro':str(e)}
     
-
+      
 def main():
     automacao_interface()
 
 
 if __name__ == "__main__":
     main()
+    uvicorn.run(
+        app="main:app",
+        host="localhost",
+        port=8000,
+        reload=True
+    )

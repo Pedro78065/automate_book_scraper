@@ -1,0 +1,121 @@
+#filtro {
+    margin-top : 50px;
+    
+}
+
+h2 {
+    color:gray;
+}
+
+p {
+    color:green;
+}
+
+#bt_enviar3 {
+    color:brown;
+}
+
+.botao2 {
+    color:black;
+}
+
+.botao1 {
+    color : purple;
+}
+
+footer {
+    color:aqua;
+    margin-top:329px;
+
+}
+
+#buscar {
+    color: blue;
+    margin:10px;
+    border:1px solid;
+    padding:4px;
+}
+
+#buscar_name {
+    color:green;
+    margin:10px;
+    border:1px solid;
+    padding:4px;
+}
+
+#filtro{
+    color:purple;
+    margin:10px;
+    border:2px solid;
+    padding:3px;
+    padding-left: 22px;
+}
+
+#filtro_name{
+    color:orange;
+    margin:10px;
+    border:2px solid;
+    padding:3px;
+    padding-left: 22px;
+}
+
+#nome_name {
+    color:darkcyan;
+    margin:10px;
+    border:1px;
+    padding:1px;
+}
+
+#nome_preco {
+    color: darkblue;
+    margin:11px;
+    border:1px;
+    padding:1px;
+}
+
+#resultado {
+    color: red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.livros{
+    height: 120px;
+    width: 200px;
+    background-color: black;
+    border:5px solid;
+    border-color: blue;
+    border-radius:8px;
+    margin:5px;
+    text-align:center;
+    box-shadow: 5px 5px 8px rgb(116, 78, 253);
+}
+
+.livros:hover{
+    height:200px;
+    transition:0.5s;
+}
+
+#deletar{
+    background-color: red;
+    color:yellow;
+    display:flex;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 4px 5px 5px white;
+    box-shadow: 2px 2px 6px orange;
+    border-radius:8px;
+    transition:0.3s;
+}
+#deletar:hover{
+    width:auto;
+    height:50px;
+    padding-top: 15px;
+    background-color:rgb(253, 82, 82);
+}

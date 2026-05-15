@@ -1,11 +1,18 @@
 from playwright.sync_api import sync_playwright
 from playwright_stealth import Stealth
 import pandas as pd
+from src.database import *
+import mysql.connector
 
 def scraper(num_page = 5):
     """
     :num_page: serve para definir quantas páginas vc quer coletar os dados.
     """
+    try:
+        create_database("scraper")
+        create_table("dados")
+    except mysql.connector.Error as e:
+        print(f"Error:{e}")
     with sync_playwright() as p:
         try:
             browser = p.chromium.launch(headless=True)
@@ -45,6 +52,16 @@ def scraper(num_page = 5):
             except Exception as e:
                 print(f'Erro:{e}')
 
+
+            df = pd.DataFrame(list_produtos)
+            df['Price'] = df["Price"] = df["Price"].str.extract(r"£(\d+\.\d+)").astype(float)
+            list_products = df.to_dict("records")
+            for livros in list_products:
+                titulo = livros['Title']
+                preco = livros['Price']
+                inserir_na_tabela(titulo, preco)
+                
+
             df = pd.DataFrame(list_produtos)
             print(f'produtos cadastrados: {len(list_produtos)}')
             return df
@@ -55,4 +72,5 @@ def scraper(num_page = 5):
         finally:
             context.close()
             browser.close()
+
             
