@@ -93,11 +93,11 @@ footer {
     margin:5px;
     text-align:center;
     box-shadow: 5px 5px 8px rgb(116, 78, 253);
+    transition:0.5s
 }
 
 .livros:hover{
     height:200px;
-    transition:0.5s;
 }
 
 #deletar{
@@ -105,17 +105,18 @@ footer {
     color:yellow;
     display:flex;
     margin-top: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     margin-left: auto;
     margin-right: auto;
     text-shadow: 4px 5px 5px white;
     box-shadow: 2px 2px 6px orange;
     border-radius:8px;
-    transition:0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 #deletar:hover{
     width:auto;
     height:50px;
     padding-top: 15px;
     background-color:rgb(253, 82, 82);
+    transform:scale(1.05);
 }
