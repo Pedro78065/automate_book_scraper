@@ -49,6 +49,7 @@ playwright install
 ## WEB COMO USAR
 
 execute main.py e abra o arquivo index.html no navegador.
+
 ---
 
 ## Como usar
