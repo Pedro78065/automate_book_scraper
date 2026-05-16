@@ -45,7 +45,10 @@ Instale os navegadores do Playwright:
 ```bash
 playwright install
 ```
+---
+## WEB COMO USAR
 
+execute main.py e abra o arquivo index.html no navegador.
 ---
 
 ## Como usar
@@ -64,7 +67,7 @@ no terminal do projeto(book_scraper) digite:
 ```bash
 uvicorn main:app --reload
 ```
-
+---
 ## Endpoints da API
 * /livros/atualizar (sempre que iniciar a api, use para o scraper coletar dados pelo primeira vez)
 * /livros
